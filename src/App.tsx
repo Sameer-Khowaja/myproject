@@ -1,24 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+
 import './App.css';
+import TopBar from './components/TopBar';
+import HeroSection from './components/HeroSection';
+import CheckInModal from "./components/CheckInModal";
+import CheckInCard from "./components/CheckInCard";
+
+interface CheckIn {
+  title: string;
+  img: string;
+}
 
 function App() {
+  const [checkIns, setCheckIns] = useState<CheckIn[]>([
+    { title: 'Check-In 1', img: require("./1.png") },
+    { title: 'Check-In 2', img: require("./2.png") },
+    { title: 'Check-In 3', img: require("./3.png") },
+    { title: 'Check-In 4', img: require("./4.png") },
+  ]);
+
+  const addCheckIn = (title: string, image: string) => {
+    setCheckIns([...checkIns, { title, img: image }]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{maxWidth:"1440px", height: "1024px", padding: '35px'}}>
+      <TopBar />
+      <HeroSection />
+      <div>
+      <CheckInModal addCheckIn={addCheckIn} />
+      <CheckInCard checkIns={checkIns} />
+    </div>
+
+     
     </div>
   );
 }
