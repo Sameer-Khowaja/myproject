@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Button,
   Modal,
-  Backdrop,
   Fade,
   Typography,
   TextField,
@@ -51,7 +50,10 @@ const CheckInModal: React.FC<CheckInModalProps> = ({ addCheckIn }) => {
       <Button
         variant="contained"
         color="primary"
-        style={{ marginBottom: "20px", borderRadius: "50px" }}
+        style={{ marginTop: "20px",
+        borderRadius: "50px",
+        height: "54px",
+        width: "166px" }}
         onClick={handleOpen}
       >
         Add Check-In
@@ -61,8 +63,8 @@ const CheckInModal: React.FC<CheckInModalProps> = ({ addCheckIn }) => {
         open={open}
         onClose={handleClose}
         closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{ timeout: 500 }}
+        // BackdropComponent={Backdrop}
+        // BackdropProps={{ timeout: 500 }}
       >
         <Fade in={open}>
           <div style={{ backgroundColor: "white", padding: "20px", borderRadius: "8px" }}>

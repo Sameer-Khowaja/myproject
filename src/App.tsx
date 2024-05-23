@@ -13,10 +13,10 @@ interface CheckIn {
 
 function App() {
   const [checkIns, setCheckIns] = useState<CheckIn[]>([
-    { title: 'Check-In 1', img: require("./1.png") },
-    { title: 'Check-In 2', img: require("./2.png") },
-    { title: 'Check-In 3', img: require("./3.png") },
-    { title: 'Check-In 4', img: require("./4.png") },
+    { title: 'Check-In 1', img: require("./components/1.png") },
+    { title: 'Check-In 2', img: require("./components/2.png") },
+    { title: 'Check-In 3', img: require("./components/3.png") },
+    { title: 'Check-In 4', img: require("./components/4.png") },
   ]);
 
   const addCheckIn = (title: string, image: string) => {

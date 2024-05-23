@@ -38,8 +38,8 @@ function TopBar() {
           >
             Feedback
           </Button>
-          <IconButton color="inherit"><NotificationsNoneIcon /></IconButton>
-          <IconButton color="inherit"><InfoOutlinedIcon /></IconButton>
+          <IconButton color="primary"><NotificationsNoneIcon /></IconButton>
+          <IconButton color="primary"><InfoOutlinedIcon /></IconButton>
           <Avatar
             alt="User Profile"
             src="/path/to/profile.jpg"

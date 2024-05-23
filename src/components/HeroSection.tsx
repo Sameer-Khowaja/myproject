@@ -1,6 +1,7 @@
 import React from "react";
-import { Button } from "@mui/material";
+// import { Button } from "@mui/material";
 import banner from './banner.png';
+
 
 
 
@@ -27,12 +28,13 @@ Hi! 👋 James Doe</h1>
         <p>
         Lorem ipsus dolor sit amen, something important to say here
         </p>
-        <Button variant="contained" color="primary" style={{marginTop: "20px",
+        {/* <Button variant="contained" color="primary" style={{marginTop: "20px",
     borderRadius: "50px",
-    height: "54px",
+    height: "54px"
+    ,
     width: "166px"}}>
           Add Check In
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
